@@ -219,7 +219,7 @@ int main(int argc, char** argv){
 	clock_t begin = clock();
 	if(my_rank == 0){
 		srand(time(NULL));
-		int SizeOfMatrix=20;
+		int SizeOfMatrix=10;
 		//printf("Enter size of matrix:\n");
 		//scanf("%d" , &SizeOfMatrix);
 		//printf("SizeOfMatrix = %d\n", SizeOfMatrix);
