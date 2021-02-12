@@ -4,7 +4,7 @@
 #include <stdlib.h>
 #include "mpi.h"
 
-#define MAX_ARRAY_SIZE 16
+#define MAX_ARRAY_SIZE 10
 #define TRUE 1
 #define FALSE 0
 
@@ -219,7 +219,7 @@ int main(int argc, char** argv){
 	clock_t begin = clock();
 	if(my_rank == 0){
 		srand(time(NULL));
-		int SizeOfMatrix=16;
+		int SizeOfMatrix=10;
 		//printf("Enter size of matrix:\n");
 		//scanf("%d" , &SizeOfMatrix);
 		//printf("SizeOfMatrix = %d\n", SizeOfMatrix);
