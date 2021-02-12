@@ -5,6 +5,7 @@
 #include <math.h>
 #include <iostream>
 #include <fstream>
+#include <chrono>
 
 #define EPS 1e-15
 
@@ -372,7 +373,8 @@ int main(int argc, char * argv[]) {
         args[i].code = &res_code;
 	}
 
-    long int t_start = get_full_time();
+    //long int t_start = get_full_time();
+	auto start=chrono::system_clock::now();
 
 
     for (int i = 0; i < n_threads; i++)
@@ -409,7 +411,9 @@ int main(int argc, char * argv[]) {
 
     //get_inverse(matrix, res, d, n, n_threads, 0);
     cout << "THREADS: " << n_threads << endl;
-    cout << "TIME: " << (double) (get_full_time() - t_start) << endl;
+    auto end=chrono::system_clock::now();
+    chrono::duration<double> elapsed = end - start;
+    cout << "TIME: " << elapsed.count() << endl;
 
     cout << "A: " << endl;
     print(matrix, n, m, cout);
