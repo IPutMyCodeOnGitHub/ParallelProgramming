@@ -4,7 +4,7 @@
 #include <stdlib.h>
 #include "mpi.h"
 
-#define MAX_ARRAY_SIZE 10
+#define MAX_ARRAY_SIZE 16
 #define TRUE 1
 #define FALSE 0
 
